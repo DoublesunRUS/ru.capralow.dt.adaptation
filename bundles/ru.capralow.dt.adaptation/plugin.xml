@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="com._1c.g5.v8.dt.bsl.externalBslValidator">
+      <externalValidator
+            class="ru.capralow.dt.adaptation.internal.ExecutableExtensionFactory:ru.capralow.dt.adaptation.prefix.ObjectValidator">
+      </externalValidator>
+      <externalValidator
+            class="ru.capralow.dt.adaptation.internal.ExecutableExtensionFactory:ru.capralow.dt.adaptation.prefix.AttributeValidator">
+      </externalValidator>
+      <externalValidator
+            class="ru.capralow.dt.adaptation.internal.ExecutableExtensionFactory:ru.capralow.dt.adaptation.prefix.ModuleValidator">
+      </externalValidator>
+   </extension>
+</plugin>
