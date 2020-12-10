@@ -37,23 +37,6 @@ public class AttributeValidator
     @Inject
     IDistributionSupportTypeProvider distributionSupportTypeProvider;
 
-    private void checkAttribute(String attributeName, boolean objectHasSupport, MdObject attribute, EObject object,
-        CustomValidationMessageAcceptor messageAcceptor)
-    {
-        UserSupportMode attributeSupportMode = distributionSupportTypeProvider.getUserSupportMode(attribute);
-        boolean attributeHasSupport = objectHasSupport && attributeSupportMode != null;
-
-        boolean attributeHasPrefix = !PrefixUtils.getPrefixFromName(attributeName).isEmpty();
-
-        if (attributeHasSupport && attributeHasPrefix)
-            messageAcceptor.warning(MessageFormat.format(Messages.Error_Attribute0HasUnnecessaryPrefix, attributeName),
-                object, MODULE__CONTEXT_DEF, ERROR_ATTRIBUTE_HAS_UNNECESSARY_PREFIX);
-
-        if (!attributeHasSupport && !attributeHasPrefix)
-            messageAcceptor.warning(MessageFormat.format(Messages.Error_Attribute0HasNoPrefix, attributeName), object,
-                MODULE__CONTEXT_DEF, ERROR_ATTRIBUTE_HAS_NO_PREFIX);
-    }
-
     @Override
     public boolean needValidation(EObject object)
     {
@@ -112,5 +95,26 @@ public class AttributeValidator
 
         }
 
+    }
+
+    private void checkAttribute(String attributeName, boolean objectHasSupport, MdObject attribute, EObject object,
+        CustomValidationMessageAcceptor messageAcceptor)
+    {
+        UserSupportMode attributeSupportMode = distributionSupportTypeProvider.getUserSupportMode(attribute);
+        boolean attributeHasSupport = attributeSupportMode != null;
+
+        boolean attributeHasPrefix = !PrefixUtils.getPrefixFromName(attributeName).isEmpty();
+
+        boolean attributeNeedPrefix = true;
+        if (!objectHasSupport || attributeHasSupport)
+            attributeNeedPrefix = false;
+
+        if (!attributeNeedPrefix && attributeHasPrefix)
+            messageAcceptor.warning(MessageFormat.format(Messages.Error_Attribute0HasUnnecessaryPrefix, attributeName),
+                object, MODULE__CONTEXT_DEF, ERROR_ATTRIBUTE_HAS_UNNECESSARY_PREFIX);
+
+        if (attributeNeedPrefix && !attributeHasPrefix)
+            messageAcceptor.warning(MessageFormat.format(Messages.Error_Attribute0HasNoPrefix, attributeName), object,
+                MODULE__CONTEXT_DEF, ERROR_ATTRIBUTE_HAS_NO_PREFIX);
     }
 }
