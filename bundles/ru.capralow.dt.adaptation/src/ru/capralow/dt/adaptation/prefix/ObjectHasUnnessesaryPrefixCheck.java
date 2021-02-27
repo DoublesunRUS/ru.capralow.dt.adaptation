@@ -48,7 +48,7 @@ public class ObjectHasUnnessesaryPrefixCheck
             if (subsystem.isIncludeInCommandInterface())
                 continue;
 
-            if (PrefixUtils.nameHasPrefix(subsystem.getName(), prefixNamePattern))
+            if (!PrefixUtils.nameHasPrefix(subsystem.getName(), prefixNamePattern))
             {
                 hasStandartSubsystem = true;
                 break;
@@ -56,7 +56,7 @@ public class ObjectHasUnnessesaryPrefixCheck
         }
 
         String objectName = ((MdObject)object).getName();
-        boolean objectHasPrefix = !PrefixUtils.nameHasPrefix(objectName, prefixNamePattern);
+        boolean objectHasPrefix = PrefixUtils.nameHasPrefix(objectName, prefixNamePattern);
 
         if (hasStandartSubsystem && objectHasPrefix)
             resultAcceptor.addIssue(Messages.Error_ObjectHasUnnecessaryPrefix, MD_OBJECT__NAME);
