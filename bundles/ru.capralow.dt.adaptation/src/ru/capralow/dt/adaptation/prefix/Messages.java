@@ -20,6 +20,8 @@ public class Messages
     public static String Error_Method0HasNoPrefix;
     public static String Error_Method0HasUnnecessaryPrefix;
 
+    public static String Parameter_PrefixName;
+
     static
     {
         NLS.initializeMessages(BUNDLE_NAME, Messages.class);

@@ -6,15 +6,13 @@ package ru.capralow.dt.adaptation;
 public final class PrefixUtils
 {
 
-    public static String getPrefixFromName(String name)
+    public static boolean nameHasPrefix(String name, String[] prefixes)
     {
-        String[] nameArray = name.split("[.]"); //$NON-NLS-1$
-        String[] subNameArray = nameArray[nameArray.length - 1].split("[_]"); //$NON-NLS-1$
+        for (String prefix : prefixes)
+            if (name.startsWith(prefix))
+                return true;
 
-        if (subNameArray.length == 1)
-            return ""; //$NON-NLS-1$
-
-        return subNameArray[0].concat("_"); //$NON-NLS-1$
+        return false;
     }
 
     private PrefixUtils()

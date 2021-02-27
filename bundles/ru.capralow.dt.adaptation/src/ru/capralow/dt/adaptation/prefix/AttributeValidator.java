@@ -100,10 +100,12 @@ public class AttributeValidator
     private void checkAttribute(String attributeName, boolean objectHasSupport, MdObject attribute, EObject object,
         CustomValidationMessageAcceptor messageAcceptor)
     {
+        String[] prefixNamePattern = new String[1];
+
         UserSupportMode attributeSupportMode = distributionSupportTypeProvider.getUserSupportMode(attribute);
         boolean attributeHasSupport = attributeSupportMode != null;
 
-        boolean attributeHasPrefix = !PrefixUtils.getPrefixFromName(attributeName).isEmpty();
+        boolean attributeHasPrefix = !PrefixUtils.nameHasPrefix(attributeName, prefixNamePattern);
 
         boolean attributeNeedPrefix = true;
         if (!objectHasSupport || attributeHasSupport)

@@ -88,8 +88,10 @@ public class ModuleValidator
             }
         }
 
+        String[] prefixNamePattern = new String[1];
+
         String methodName = ((Method)object).getName();
-        boolean methodHasPrefix = !PrefixUtils.getPrefixFromName(methodName).isEmpty();
+        boolean methodHasPrefix = !PrefixUtils.nameHasPrefix(methodName, prefixNamePattern);
 
         if (methodHasSupport && methodHasPrefix)
             messageAcceptor.warning(MessageFormat.format(Messages.Error_Method0HasUnnecessaryPrefix, methodName),
