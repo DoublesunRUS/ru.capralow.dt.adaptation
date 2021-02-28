@@ -8,6 +8,7 @@ import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 
+import com._1c.g5.v8.bm.core.IBmObject;
 import com._1c.g5.v8.dt.core.platform.IDtProject;
 import com._1c.g5.v8.dt.metadata.mdclass.CommonModule;
 import com._1c.g5.v8.dt.testing.check.CheckTestBase;
@@ -40,7 +41,7 @@ public class ObjectHasNoPrefixCheckTest
         CommonModule testObject = (CommonModule)getTopObjectByFqn("CommonModule.ОбщийМодуль", dtProject); //$NON-NLS-1$
         assertNotNull(testObject);
 
-        Marker targetMarker = getFirstMarker(PrefixCheck.CHECK_ID, testObject, dtProject);
+        Marker targetMarker = getFirstMarker(PrefixCheck.CHECK_ID, ((IBmObject)testObject).bmGetId(), dtProject);
         assertNotNull(targetMarker);
 
         assertEquals(PrefixCheck.CHECK_ID, targetMarker.getMessage());
