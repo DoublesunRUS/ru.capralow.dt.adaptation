@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5f854b0b-7d4d-4d53-b686-fe5d484bb9a7">
+  <name>Префикс_Подсистема</name>
+  <synonym>
+    <key>ru</key>
+    <value>Префикс подсистема</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>CommonModule.Префикс_ОбщийМодуль</content>
+  <content>CommonModule.ОбщийМодульНетПрефикса</content>
+</mdclass:Subsystem>

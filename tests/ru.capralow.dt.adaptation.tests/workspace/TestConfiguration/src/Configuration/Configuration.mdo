@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Configuration xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7242bd9c-7218-485e-bbe8-5413652619a4">
+  <name>TestConfiguration</name>
+  <synonym>
+    <key>ru</key>
+    <value>Test configuration</value>
+  </synonym>
+  <containedObjects classId="9cd510cd-abfc-11d4-9434-004095e12fc7" objectId="0fa9e959-553e-438c-ab7e-d6229b764580"/>
+  <containedObjects classId="9fcd25a0-4822-11d4-9414-008048da11f9" objectId="3e6c56de-8daf-4692-a42c-207e6a75b81b"/>
+  <containedObjects classId="e3687481-0a87-462c-a166-9f34594f9bba" objectId="d24494f5-b26e-4a61-bf0f-b75379bff79e"/>
+  <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="27e090c7-9e99-4a34-bc04-38421a8fbcf5"/>
+  <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="4cdb3fc4-e76d-457e-8aa8-5066812633af"/>
+  <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="cdd925bc-9a6e-4018-be44-de7ed406a4cc"/>
+  <configurationExtensionCompatibilityMode>8.3.16</configurationExtensionCompatibilityMode>
+  <defaultRunMode>ManagedApplication</defaultRunMode>
+  <usePurposes>PersonalComputer</usePurposes>
+  <scriptVariant>Russian</scriptVariant>
+  <requiredMobileApplicationPermissions>
+    <permission>AllowOSBackup</permission>
+    <use>true</use>
+  </requiredMobileApplicationPermissions>
+  <defaultLanguage>Language.Русский</defaultLanguage>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <objectAutonumerationMode>NotAutoFree</objectAutonumerationMode>
+  <modalityUseMode>DontUse</modalityUseMode>
+  <synchronousPlatformExtensionAndAddInCallUseMode>DontUse</synchronousPlatformExtensionAndAddInCallUseMode>
+  <compatibilityMode>8.3.16</compatibilityMode>
+  <languages uuid="ed4a45db-2f5b-4ba8-8874-6abc6642b7a7">
+    <name>Русский</name>
+    <synonym>
+      <key>ru</key>
+      <value>Русский</value>
+    </synonym>
+    <languageCode>ru</languageCode>
+  </languages>
+  <subsystems>Subsystem.ИнтерфейснаяПодсистема</subsystems>
+  <subsystems>Subsystem.ВложеннаяИнтерфейснаяПодсистема</subsystems>
+  <subsystems>Subsystem.ВложеннаяПодсистема</subsystems>
+  <subsystems>Subsystem.Подсистема</subsystems>
+  <subsystems>Subsystem.Префикс_Подсистема</subsystems>
+  <subsystems>Subsystem.ПсевдоПрефикс_Подсистема</subsystems>
+  <commonModules>CommonModule.ОбщийМодуль</commonModules>
+  <commonModules>CommonModule.Префикс_ОбщийМодуль</commonModules>
+  <commonModules>CommonModule.ОбщийМодульНетПрефикса</commonModules>
+  <commonModules>CommonModule.Префикс_ОбщийМодульЛишнийПрефикс</commonModules>
+</mdclass:Configuration>

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "settings": {
+    "documentation-comment-hub": {
+      "enabled": false
+    },
+    "module-unused-method-check": {
+      "enabled": false
+    },
+    "PrefixCheck": {
+      "properties": {
+        "prefixNamePattern": "Префикс_"
+      }
+    }
+  }
+}

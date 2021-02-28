@@ -20,6 +20,9 @@ public class Messages
     public static String Error_Method0HasNoPrefix;
     public static String Error_Method0HasUnnecessaryPrefix;
 
+    public static String Error_MethodPrefix_Title;
+    public static String Error_MethodPrefix_Description;
+
     public static String Parameter_PrefixName;
 
     static

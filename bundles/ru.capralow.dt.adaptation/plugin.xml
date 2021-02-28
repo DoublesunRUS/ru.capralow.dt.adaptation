@@ -11,11 +11,7 @@
 		
 		<check
 			category="ru.capralow.dt.adaptation.prefix.checks"
-			class="ru.capralow.dt.adaptation.internal.ExecutableExtensionFactory:ru.capralow.dt.adaptation.prefix.ObjectHasNoPrefixCheck">
-		</check>
-		<check
-			category="ru.capralow.dt.adaptation.prefix.checks"
-			class="ru.capralow.dt.adaptation.internal.ExecutableExtensionFactory:ru.capralow.dt.adaptation.prefix.ObjectHasUnnessesaryPrefixCheck">
+			class="ru.capralow.dt.adaptation.internal.ExecutableExtensionFactory:ru.capralow.dt.adaptation.prefix.PrefixCheck">
 		</check>
 		
 	</extension>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="fc6c167b-a83e-45e0-b95b-8f8bddd163e0">
+  <name>ВложеннаяИнтерфейснаяПодсистема</name>
+  <synonym>
+    <key>ru</key>
+    <value>Вложенная интерфейсная подсистема</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <subsystems>ИнтерфейснаяПодсистема2</subsystems>
+</mdclass:Subsystem>
